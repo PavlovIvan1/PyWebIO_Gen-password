@@ -1,11 +1,13 @@
 import random
+from string import ascii_lowercase, ascii_uppercase
 from pywebio.input import input
 from pywebio.output import put_text
 from pywebio import start_server
 
+
 def main_func():
-    lower = 'abcdefghijklmnopqrstuvwxyz'
-    upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    lower = ascii_lowercase
+    upper = ascii_uppercase
     nums = '1234567890'
     symbols = '!@#$%^&*()'
 
