@@ -1,11 +1,14 @@
+from pywebio import start_server, config
+from pywebio.output import *
+from pywebio.pin import *
 import random
 from string import ascii_lowercase, ascii_uppercase
 from pywebio.input import input
-from pywebio.output import put_text
-from pywebio import start_server
 
 
-def main_func():
+
+@config(theme='sketchy')
+def main():
     lower = ascii_lowercase
     upper = ascii_uppercase
     nums = '1234567890'
@@ -17,5 +20,6 @@ def main_func():
 
     put_text(password)
 
+
 if __name__ == '__main__':
-    start_server(main_func(), debug=False, port=5050)
+    start_server(main, port=8080, debug=True)
